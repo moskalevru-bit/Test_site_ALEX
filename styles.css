@@ -654,3 +654,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .doc__meta { font-size: var(--text-sm); color: var(--color-ink-3); }
 .doc__list { padding-left: 1.2em; }
 .doc__back a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; color: var(--color-accent); }
+
+/* Самые узкие телефоны (320 px, iPhone SE 1): длинная кнопка не вылезает за поля */
+@media (max-width: 359px) {
+  .btn--lg { padding-inline: 18px; white-space: normal; text-align: center; max-width: 100%; }
+}
