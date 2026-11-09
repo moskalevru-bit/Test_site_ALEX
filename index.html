@@ -1,0 +1,559 @@
+<title>Гостиница Надежда</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex">
+<meta name="format-detection" content="telephone=no">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Onest:wght@400;500;600&display=swap&subset=cyrillic">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="demo.css">
+
+  <!-- Логотип: перерисован в векторе по фирменному знаку гостиницы -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="logo" viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="57" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="60" cy="60" r="52" fill="none" stroke="currentColor" stroke-width="1"/>
+      <text x="60" y="58" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="17" font-weight="600" letter-spacing="1.2" fill="currentColor">НАДЕЖДА</text>
+      <line x1="48" y1="68" x2="72" y2="68" stroke="var(--color-gold)" stroke-width="1.6"/>
+      <text x="60" y="83" text-anchor="middle" font-family="Onest, sans-serif" font-size="7.4" font-weight="600" letter-spacing="2.4" fill="currentColor">ГОСТИНИЦА</text>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3 .78.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.25-.12-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.64.8-.79.97-.14.16-.29.18-.54.06a6.7 6.7 0 0 1-3.34-2.92c-.25-.43.25-.4.72-1.34.08-.16.04-.3-.02-.43l-.76-1.83c-.2-.48-.4-.41-.56-.42h-.48a.92.92 0 0 0-.66.31 2.8 2.8 0 0 0-.87 2.07 4.85 4.85 0 0 0 1.02 2.58 11.1 11.1 0 0 0 4.25 3.75c1.58.68 2.2.74 2.99.62.48-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.1-.23-.17-.48-.3z"/></symbol>
+    <symbol id="i-tg" viewBox="0 0 24 24"><path fill="currentColor" d="M21.5 3.6 2.9 10.8c-1.27.5-1.26 1.22-.23 1.53l4.77 1.49 1.84 5.64c.22.62.11.86.76.86.5 0 .72-.23 1-.5l2.38-2.3 4.94 3.65c.91.5 1.57.24 1.8-.85l3.25-15.33c.33-1.33-.51-1.94-1.4-1.53zM8.6 13.3l9.7-6.1c.48-.3.93-.14.56.19l-8.3 7.5-.32 3.44z"/></symbol>
+    <symbol id="i-max" viewBox="0 0 24 24"><path fill="currentColor" d="M12.2 2C6.7 2 2.3 6.2 2.3 11.6c0 2.3.8 4.4 2 6 .2.3.2.7.1 1.1L3.6 21c-.1.4.3.8.7.6l2.6-1c.3-.1.7-.1 1 .1 1.3.7 2.8 1.1 4.3 1.1 5.5 0 9.9-4.3 9.9-9.7S17.7 2 12.2 2zm0 15.3c-3.1 0-5.6-2.5-5.6-5.6S9.1 6 12.2 6s5.6 2.5 5.6 5.6-2.5 5.7-5.6 5.7z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.4V17h16V7.4l-8 5.3zM5.6 7l6.4 4.2L18.4 7z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path fill="currentColor" d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 1-2zm1 2v12.2L7.3 16H20V5zm3 4h8v2H8zm0-3h8v2H8z"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3zm12 8H5v9h14zM5 6v2h14V6z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="currentColor" d="M13.2 5.3 19.9 12l-6.7 6.7-1.4-1.4 4.3-4.3H4v-2h12.1l-4.3-4.3z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3-4.6-4.5 6.4-.9z"/></symbol>
+  </svg>
+
+  <a class="skip" href="#main">Перейти к содержимому</a>
+
+  <!-- Шапка: плавающая «пилюля» -->
+  <header class="nav" data-nav>
+    <div class="nav__pill">
+      <a class="nav__brand" href="#top" aria-label="Гостиница Надежда, на главную">
+        <svg class="nav__logo" aria-hidden="true"><use href="#logo"/></svg>
+        <span class="nav__name">Надежда</span>
+      </a>
+      <nav class="nav__links" aria-label="Разделы">
+        <a href="#rooms">Номера</a>
+        <a href="#location">Как добраться</a>
+        <a href="#gallery">Фото</a>
+        <a href="#rules">Правила</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a class="nav__phone" href="tel:+70000000000">
+        <svg aria-hidden="true"><use href="#i-phone"/></svg>
+        <span>+7 (000) 000-00-00</span>
+      </a>
+      <a class="btn btn--accent nav__cta" href="#booking">Предварительная бронь</a>
+      <button class="nav__burger" type="button" aria-expanded="false" aria-controls="menu" data-menu-open>
+        <span class="visually-hidden">Открыть меню</span>
+        <span class="nav__burger-lines" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Мобильное меню -->
+  <dialog class="menu" id="menu" aria-label="Меню">
+    <div class="menu__inner">
+      <button class="menu__close" type="button" data-menu-close>
+        <span class="visually-hidden">Закрыть меню</span>
+        <span aria-hidden="true">×</span>
+      </button>
+      <nav class="menu__links" aria-label="Разделы">
+        <a href="#rooms">Номера и цены</a>
+        <a href="#location">Как добраться</a>
+        <a href="#gallery">Фотогалерея</a>
+        <a href="#rules">Правила и вопросы</a>
+        <a href="#booking">Предварительная бронь</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a class="btn btn--accent btn--block" href="tel:+70000000000">
+        <svg aria-hidden="true"><use href="#i-phone"/></svg> Позвонить
+      </a>
+    </div>
+  </dialog>
+
+  <main id="main">
+    <!-- 1. Первый экран -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <picture class="hero__media">
+        <source media="(min-width: 700px)" srcset="img/entrance-s.jpg 800w, img/entrance.jpg 1600w" sizes="100vw">
+        <img src="img/exterior-evening-s.jpg" width="800" height="1067" alt="Вход в гостиницу: деревянная отделка и резное панно" fetchpriority="high">
+      </picture>
+      <div class="hero__content wrap">
+        <p class="hero__notice">
+          <svg aria-hidden="true"><use href="#i-cal"/></svg>
+          Демоверсия сайта · открытие 30 декабря 2026
+        </p>
+        <h1 class="hero__title" id="hero-title">Гостиница в&nbsp;центре Петрозаводска у&nbsp;автовокзала</h1>
+        <p class="hero__lead">Улица Примерная, 1. Небольшой тихий отель, где администратор знает гостей по имени. 150&nbsp;м до автовокзала, 400&nbsp;м до ж/д вокзала.</p>
+        <div class="hero__actions">
+          <a class="btn btn--accent btn--lg" href="#booking">Забронировать с 30 декабря</a>
+          <a class="btn btn--ghost-light btn--lg" href="tel:+70000000000">
+            <svg aria-hidden="true"><use href="#i-phone"/></svg> Позвонить
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Факты -->
+    <section class="facts" aria-label="Коротко о гостинице">
+      <ul class="facts__list wrap">
+        <li><b>150 м</b><span>до автовокзала</span></li>
+        <li><b>400 м</b><span>до ж/д вокзала</span></li>
+        <li><b>от 3500 ₽</b><span>за номер в сутки</span></li>
+        <li><b>24 часа</b><span>работает ресепшен</span></li>
+        <li><b>Бесплатно</b><span>Wi-Fi и парковка</span></li>
+      </ul>
+    </section>
+
+    <!-- 3. Новый год: превращаем консервацию в повод забронировать заранее -->
+    <section class="split split--reverse section" aria-labelledby="ny-title">
+      <div class="split__text reveal">
+        <h2 class="h2" id="ny-title">Новый год в&nbsp;Карелии: бронируйте номер заранее</h2>
+        <p>Сейчас гостиница на сезонной консервации: обновляемся и готовимся к зиме. Мы снова откроемся <b>30 декабря 2026 года</b>, ровно к праздникам.</p>
+        <p>Конец декабря и январь - высокий сезон, свободные номера разбирают быстро. Оставьте предварительную заявку сейчас: администратор перезвонит, подтвердит даты и цену. Предоплата до подтверждения не нужна.</p>
+        <a class="btn btn--outline" href="#booking">Оставить заявку на праздники <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <figure class="split__media reveal">
+        <img src="img/lounge-s.jpg" srcset="img/lounge-s.jpg 800w, img/lounge.jpg 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="551" loading="lazy" alt="Холл с кожаными диванами">
+      </figure>
+    </section>
+
+    <!-- 4. Номера -->
+    <section class="rooms section" id="rooms" aria-labelledby="rooms-title">
+      <div class="wrap section-head">
+        <h2 class="h2" id="rooms-title">Номера и цены</h2>
+        <p class="section-head__lead">Четыре типа номеров: Стандарт Double, Стандарт Twin, Семейный и Эконом+. Цены за номер в сутки. Праздничные цены, скидки при долгом проживании и акции уточняйте у администратора.</p>
+      </div>
+
+      <!-- Стандарт Double -->
+      <article class="room split" id="room-standard-double" aria-labelledby="r1">
+        <div class="room__gallery reveal" data-carousel>
+          <div class="room__track" tabindex="0" aria-label="Фото номера Стандарт Double">
+            <img src="img/double-1-s.jpg" srcset="img/double-1-s.jpg 800w, img/double-1.jpg 1195w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="600" loading="lazy" alt="Стандарт Double: двуспальная кровать, ночники, окно с видом на деревья">
+            <img src="img/double-2-s.jpg" srcset="img/double-2-s.jpg 800w, img/double-2.jpg 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="532" loading="lazy" alt="Стандарт Double: кровать, светлые шторы, телевизор на стене">
+            <img src="img/room-details-s.jpg" srcset="img/room-details-s.jpg 800w, img/room-details.jpg 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="532" loading="lazy" alt="Электрический чайник и стаканы на рабочем столе">
+            <img src="img/bath-1-s.jpg" srcset="img/bath-1-s.jpg 800w, img/bath-1.jpg 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="1257" loading="lazy" alt="Собственный санузел с душем и раковиной">
+          </div>
+          <div class="room__controls">
+            <button type="button" class="icon-btn" data-prev aria-label="Предыдущее фото"><svg aria-hidden="true" class="flip"><use href="#i-arrow"/></svg></button>
+            <span class="room__count" aria-live="polite" data-count>1 / 4</span>
+            <button type="button" class="icon-btn" data-next aria-label="Следующее фото"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+        </div>
+        <div class="room__info split__text reveal">
+          <h3 class="h3" id="r1">Стандарт Double</h3>
+          <ul class="tags">
+            <li>1-2 гостя</li><li>двуспальная кровать</li><li>2 этаж</li>
+          </ul>
+          <p>Номер на втором этаже с высокими потолками. Хороший выбор для командировки или поездки вдвоём.</p>
+          <dl class="price">
+            <div><dt>1-2 гостя</dt><dd>4000 ₽</dd></div>
+          </dl>
+          <ul class="amenities">
+            <li>Двуспальная кровать</li>
+            <li>Рабочее место с письменным столом</li>
+            <li>Телевизор и телефон</li>
+            <li>Электрический чайник, фен</li>
+            <li>Свой санузел с душем</li>
+          </ul>
+          <button type="button" class="btn btn--outline" data-book-room="standard-double">Забронировать этот номер <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </article>
+
+      <!-- Стандарт Twin -->
+      <article class="room split split--reverse" id="room-standard-twin" aria-labelledby="r2">
+        <div class="room__gallery reveal" data-carousel>
+          <div class="room__track" tabindex="0" aria-label="Фото номера Стандарт Twin">
+            <img src="img/twin-1-s.jpg" srcset="img/twin-1-s.jpg 800w, img/twin-1.jpg 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="600" loading="lazy" alt="Стандарт Twin: две односпальные кровати, большое окно">
+            <img src="img/twin-2-s.jpg" srcset="img/twin-2-s.jpg 800w, img/twin-2.jpg 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="495" loading="lazy" alt="Стандарт Twin: кровати, тумбочка и стол с чайником">
+            <img src="img/twin-3-s.jpg" srcset="img/twin-3-s.jpg 800w, img/twin-3.jpg 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="532" loading="lazy" alt="Стандарт Twin: вид от двери на две кровати и рабочую зону">
+            <img src="img/room-phone-s.jpg" srcset="img/room-phone-s.jpg 800w, img/room-phone.jpg 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="1203" loading="lazy" alt="Телефон на прикроватной тумбочке">
+          </div>
+          <div class="room__controls">
+            <button type="button" class="icon-btn" data-prev aria-label="Предыдущее фото"><svg aria-hidden="true" class="flip"><use href="#i-arrow"/></svg></button>
+            <span class="room__count" aria-live="polite" data-count>1 / 4</span>
+            <button type="button" class="icon-btn" data-next aria-label="Следующее фото"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+        </div>
+        <div class="room__info split__text reveal">
+          <h3 class="h3" id="r2">Стандарт Twin</h3>
+          <ul class="tags">
+            <li>1-2 гостя</li><li>две отдельные кровати</li><li>1 и 2 этаж</li>
+          </ul>
+          <p>Две односпальные кровати с ортопедическими матрасами. Удобно коллегам в командировке, друзьям и тем, кто едет в Карелию путешествовать.</p>
+          <dl class="price">
+            <div><dt>1-2 гостя</dt><dd>4000 ₽</dd></div>
+          </dl>
+          <ul class="amenities">
+            <li>Две кровати с ортопедическими матрасами</li>
+            <li>Рабочее место с письменным столом</li>
+            <li>Телевизор и телефон</li>
+            <li>Электрический чайник, фен</li>
+            <li>Свой санузел с душем</li>
+          </ul>
+          <button type="button" class="btn btn--outline" data-book-room="standard-twin">Забронировать этот номер <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </article>
+
+      <!-- Семейный -->
+      <article class="room split" id="room-family" aria-labelledby="r3">
+        <div class="room__gallery reveal" data-carousel>
+          <div class="room__track" tabindex="0" aria-label="Фото семейного номера">
+            <img src="img/family-1-s.jpg" srcset="img/family-1-s.jpg 800w, img/family-1.jpg 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="565" loading="lazy" alt="Семейный номер: диван, журнальный столик, кровати и телевизор">
+            <img src="img/family-2-s.jpg" srcset="img/family-2-s.jpg 800w, img/family-2.jpg 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="540" loading="lazy" alt="Семейный номер: шкаф, кровать и диван-кровать">
+            <img src="img/family-3-s.jpg" srcset="img/family-3-s.jpg 800w, img/family-3.jpg 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="532" loading="lazy" alt="Семейный номер: три односпальные кровати">
+          </div>
+          <div class="room__controls">
+            <button type="button" class="icon-btn" data-prev aria-label="Предыдущее фото"><svg aria-hidden="true" class="flip"><use href="#i-arrow"/></svg></button>
+            <span class="room__count" aria-live="polite" data-count>1 / 3</span>
+            <button type="button" class="icon-btn" data-next aria-label="Следующее фото"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+        </div>
+        <div class="room__info split__text reveal">
+          <h3 class="h3" id="r3">Семейный</h3>
+          <ul class="tags">
+            <li>до 4 гостей</li><li>35 м²</li><li>1 этаж, окна во двор</li>
+          </ul>
+          <p>Самый просторный номер. Окна выходят в тихий двор, поэтому здесь хорошо спится даже в центре города.</p>
+          <dl class="price">
+            <div><dt>1-2 гостя</dt><dd>4000 ₽</dd></div>
+            <div><dt>3 гостя</dt><dd>5000 ₽</dd></div>
+            <div><dt>4-й гость</dt><dd>уточняйте</dd></div>
+          </dl>
+          <ul class="amenities">
+            <li>Три односпальные кровати и диван-кровать</li>
+            <li>Рабочий и журнальный столы</li>
+            <li>Телевизор и телефон</li>
+            <li>Электрический чайник, фен</li>
+            <li>Свой санузел с душем</li>
+          </ul>
+          <button type="button" class="btn btn--outline" data-book-room="family">Забронировать этот номер <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </article>
+
+      <!-- Эконом+ -->
+      <article class="room split split--reverse" id="room-econom-plus" aria-labelledby="r4">
+        <div class="room__gallery reveal" data-carousel>
+          <div class="room__track" tabindex="0" aria-label="Фото номера Эконом+">
+            <img src="img/econom-1-s.jpg" srcset="img/econom-1-s.jpg 800w, img/econom-1.jpg 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="600" loading="lazy" alt="Эконом+: три односпальные кровати, стол и телевизор">
+            <img src="img/econom-2-s.jpg" srcset="img/econom-2-s.jpg 800w, img/econom-2.jpg 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="532" loading="lazy" alt="Эконом+: кровати у окна с видом во двор">
+            <img src="img/econom-bath-s.jpg" srcset="img/econom-bath-s.jpg 800w, img/econom-bath.jpg 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="1203" loading="lazy" alt="Эконом+: раковина с зеркалом в номере">
+          </div>
+          <div class="room__controls">
+            <button type="button" class="icon-btn" data-prev aria-label="Предыдущее фото"><svg aria-hidden="true" class="flip"><use href="#i-arrow"/></svg></button>
+            <span class="room__count" aria-live="polite" data-count>1 / 3</span>
+            <button type="button" class="icon-btn" data-next aria-label="Следующее фото"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+        </div>
+        <div class="room__info split__text reveal">
+          <h3 class="h3" id="r4">Эконом+ <span class="h3__note">душ на этаже</span></h3>
+          <ul class="tags">
+            <li>1-3 гостя</li><li>три кровати</li><li>2 этаж, вид во двор</li>
+          </ul>
+          <p>Самый доступный вариант для семьи или компании. В номере туалет, раковина и гигиенический душ, а чистые душевые комнаты находятся на этаже.</p>
+          <dl class="price">
+            <div><dt>1-2 гостя</dt><dd>3500 ₽</dd></div>
+            <div><dt>3 гостя</dt><dd>3900 ₽</dd></div>
+          </dl>
+          <ul class="amenities">
+            <li>Три односпальные кровати</li>
+            <li>Шкаф, тумбочки, рабочий стол</li>
+            <li>Телевизор и телефон</li>
+            <li>Электрический чайник, фен</li>
+            <li>Туалет и раковина в номере, душевые на этаже</li>
+          </ul>
+          <button type="button" class="btn btn--outline" data-book-room="econom-plus">Забронировать этот номер <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </article>
+    </section>
+
+    <!-- 5. Для кого -->
+    <section class="audience section section--tint" aria-labelledby="aud-title">
+      <div class="split">
+        <div class="split__text reveal">
+          <h2 class="h2" id="aud-title">Жильё в&nbsp;центре Петрозаводска для поездок, лечения и&nbsp;учёбы</h2>
+          <dl class="audience__list">
+            <div>
+              <dt>С поезда или автобуса</dt>
+              <dd>Автовокзал через дорогу, ж/д вокзал в 400 метрах. Ночной поезд и ранний автобус больше не проблема: ресепшен работает круглосуточно.</dd>
+            </div>
+            <div>
+              <dt>В больницу или к близким</dt>
+              <dd>До Республиканской больницы 3 остановки на общественном транспорте. Тихие номера и спокойная атмосфера для тех, кто приехал на лечение или навестить родных. О скидках при долгом проживании спросите администратора.</dd>
+            </div>
+            <div>
+              <dt>По работе</dt>
+              <dd>В каждом номере рабочий стол и бесплатный Wi-Fi. Быстро добраться до любой части города и уехать обратно.</dd>
+            </div>
+            <div>
+              <dt>Студентам-заочникам на сессию</dt>
+              <dd>В шаговой доступности от гостиницы - Карельский филиал РАНХиГС (Российской академии народного хозяйства и государственной службы при Президенте РФ). Заочникам удобно жить рядом с академией во время сессии: до занятий несколько минут пешком, в номере рабочий стол и бесплатный Wi-Fi для подготовки. Забронируйте номер на все дни сессии заранее, для долгого проживания рассчитаем специальную цену.</dd>
+            </div>
+            <div>
+              <dt>Смотреть Карелию</dt>
+              <dd>Главная улица с кафе и магазинами в нескольких минутах пешком. Отсюда удобно начинать поездки к Кижам, на водопад Кивач и по Онежскому озеру.</dd>
+            </div>
+          </dl>
+        </div>
+        <figure class="split__media split__media--tall reveal">
+          <img src="img/reception-s.jpg" srcset="img/reception-s.jpg 800w, img/reception.jpg 1600w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="538" loading="lazy" alt="Холл и стойка ресепшена с мягкой мебелью">
+        </figure>
+      </div>
+    </section>
+
+    <!-- 6. Фотогалерея -->
+    <section class="gallery section" id="gallery" aria-labelledby="gal-title">
+      <div class="wrap section-head">
+        <h2 class="h2" id="gal-title">Фото гостиницы и номеров</h2>
+        <p class="section-head__lead">Настоящие фотографии гостиницы, без обработки нейросетями. Нажмите на фото, чтобы рассмотреть.</p>
+      </div>
+      <ul class="gallery__grid wrap" data-gallery>
+        <li class="g-wide"><button type="button" data-full="img/reception.jpg"><img src="img/reception-s.jpg" width="800" height="538" loading="lazy" alt="Ресепшен и зона ожидания"></button></li>
+        <li><button type="button" data-full="img/kitchen.jpg"><img src="img/kitchen-s.jpg" width="800" height="531" loading="lazy" alt="Кухня-столовая для гостей со столиками"></button></li>
+        <li><button type="button" data-full="img/lounge.jpg"><img src="img/lounge-s.jpg" width="800" height="551" loading="lazy" alt="Кожаные диваны в холле"></button></li>
+        <li class="g-tall"><button type="button" data-full="img/rune-panel.jpg"><img src="img/rune-panel-s.jpg" width="800" height="1203" loading="lazy" alt="Резное деревянное панно с карельским символом у входа"></button></li>
+        <li><button type="button" data-full="img/corridor.jpg"><img src="img/corridor-s.jpg" width="800" height="532" loading="lazy" alt="Длинный коридор с ковровой дорожкой"></button></li>
+        <li class="g-wide"><button type="button" data-full="img/exterior.jpg"><img src="img/exterior-s.jpg" width="800" height="356" loading="lazy" alt="Здание гостиницы с деревянной отделкой входа"></button></li>
+        <li><button type="button" data-full="img/clocks.jpg"><img src="img/clocks-s.jpg" width="800" height="532" loading="lazy" alt="Часы на стене холла"></button></li>
+        <li class="g-tall"><button type="button" data-full="img/exterior-evening.jpg"><img src="img/exterior-evening-s.jpg" width="800" height="1067" loading="lazy" alt="Вход в гостиницу вечером"></button></li>
+        <li><button type="button" data-full="img/towel.jpg"><img src="img/towel-s.jpg" width="800" height="650" loading="lazy" alt="Свежее полотенце в ванной"></button></li>
+        <li><button type="button" data-full="img/cup.jpg"><img src="img/cup-s.jpg" width="800" height="662" loading="lazy" alt="Стакан и мыло на полочке в ванной"></button></li>
+      </ul>
+    </section>
+
+    <!-- 7. Как добраться -->
+    <section class="location section section--tint" id="location" aria-labelledby="loc-title">
+      <div class="split split--reverse">
+        <div class="split__text reveal">
+          <h2 class="h2" id="loc-title">Как добраться до гостиницы</h2>
+          <address class="location__address">
+            Республика Карелия, Петрозаводск,<br>
+            <b>улица Примерная, 1</b> - напротив автовокзала
+          </address>
+          <ul class="routes">
+            <li>
+              <b>От автовокзала</b>
+              <span>150 метров, 2 минуты пешком через дорогу</span>
+            </li>
+            <li>
+              <b>От ж/д вокзала</b>
+              <span>400 метров, около 5 минут пешком</span>
+            </li>
+            <li>
+              <b>Из аэропорта</b>
+              <span>16 км, на такси около 20-25 минут</span>
+            </li>
+            <li>
+              <b>На машине</b>
+              <span>Бесплатная парковка с видеонаблюдением у гостиницы</span>
+            </li>
+          </ul>
+        </div>
+        <div class="map reveal">
+          <a class="map__link" href="https://yandex.ru/maps/?ll=34.3392%2C61.7866&amp;z=17&amp;l=map&amp;pt=34.3358%2C61.7877%2Cpm2dbl" target="_blank" rel="noopener">
+            <img src="img/map-s.jpg" srcset="img/map-s.jpg 800w, img/map.jpg 1200w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="600" loading="lazy" alt="Схема района: гостиница рядом автовокзал и ж/д вокзал">
+            <span class="map__cta">Открыть в Яндекс Картах <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Правила и вопросы -->
+    <section class="rules section" id="rules" aria-labelledby="rules-title">
+      <div class="split">
+        <div class="split__text reveal">
+          <h2 class="h2" id="rules-title">Правила проживания и частые вопросы</h2>
+          <p>Собрали ответы на то, о чём гости чаще всего спрашивают по телефону. Не нашли свой вопрос - напишите нам в мессенджер.</p>
+          <div class="contact-mini">
+            <a class="chip chip--wa" href="https://wa.me/70000000000" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+            <a class="chip chip--tg" href="https://t.me/+70000000000" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-tg"/></svg>Telegram</a>
+            <a class="chip chip--max" href="https://max.ru/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-max"/></svg>MAX</a>
+          </div>
+        </div>
+        <div class="faq reveal">
+          <!-- data-todo: владельцу вписать точные условия (время заезда, предоплата, дети, животные) -->
+          <details>
+            <summary>Во сколько заезд и выезд?</summary>
+            <p data-todo="время заезда и выезда">Время заезда и выезда администратор назовёт при подтверждении брони. Ранний заезд или поздний выезд обсудим, если номер свободен: ресепшен работает круглосуточно.</p>
+          </details>
+          <details>
+            <summary>Какие нужны документы?</summary>
+            <p>Паспорт или другой документ, удостоверяющий личность, на каждого взрослого гостя. На детей - свидетельство о рождении. Это требование закона о регистрации гостей в гостиницах.</p>
+          </details>
+          <details>
+            <summary>Нужна ли предоплата? Как отменить бронь?</summary>
+            <p data-todo="условия предоплаты и отмены">Предварительная заявка на сайте ни к чему не обязывает и не требует оплаты. Условия предоплаты и отмены администратор сообщит, когда будет подтверждать бронь.</p>
+          </details>
+          <details>
+            <summary>Можно с детьми? А с животными?</summary>
+            <p data-todo="правила для детей и животных">С детьми - конечно, для семьи подойдут номера Семейный и Эконом+. Про проживание с животными уточните у администратора заранее.</p>
+          </details>
+          <details>
+            <summary>Есть парковка и Wi-Fi?</summary>
+            <p>Да, оба бесплатные. Парковка у гостиницы под видеонаблюдением, Wi-Fi работает во всех номерах.</p>
+          </details>
+          <details>
+            <summary>Можно остановиться надолго?</summary>
+            <p>Да. Гостям, которые приехали на лечение в Республиканскую больницу, по работе или на сессию в РАНХиГС, рассчитаем специальную цену. Позвоните или напишите нам.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Бронирование и связь -->
+    <section class="booking section section--night" id="booking" aria-labelledby="book-title">
+      <div class="split booking__grid">
+        <div class="booking__form-wrap">
+          <h2 class="h2" id="book-title">Предварительная бронь с&nbsp;30&nbsp;декабря</h2>
+          <p class="demo-note">Это демонстрационная версия: форму можно заполнить и посмотреть подсказки, но заявка никуда не отправится.</p>
+          <p class="booking__lead">Заполните заявку: администратор перезвонит, подтвердит свободный номер и цену. Оплата сейчас не нужна.</p>
+
+          <form class="form" id="booking-form" novalidate>
+            <div class="form__row">
+              <label class="field">
+                <span class="field__label">Ваше имя</span>
+                <input name="name" type="text" autocomplete="name" required minlength="2" maxlength="60">
+                <span class="field__error" data-error-for="name"></span>
+              </label>
+              <label class="field">
+                <span class="field__label">Телефон</span>
+                <input name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="+7 (900) 123-45-67">
+                <span class="field__error" data-error-for="phone"></span>
+              </label>
+            </div>
+            <div class="form__row">
+              <label class="field">
+                <span class="field__label">Номер</span>
+                <select name="room" required>
+                  <option value="standard-double" data-max="2">Стандарт Double · от 4000 ₽</option>
+                  <option value="standard-twin" data-max="2">Стандарт Twin · от 4000 ₽</option>
+                  <option value="family" data-max="4">Семейный · от 4000 ₽</option>
+                  <option value="econom-plus" data-max="3">Эконом+ (душ на этаже) · от 3500 ₽</option>
+                </select>
+                <span class="field__error" data-error-for="room"></span>
+              </label>
+              <label class="field">
+                <span class="field__label">Гостей</span>
+                <select name="guests" required>
+                  <option value="1">1</option>
+                  <option value="2" selected>2</option>
+                </select>
+                <span class="field__error" data-error-for="guests"></span>
+              </label>
+            </div>
+            <div class="form__row">
+              <label class="field">
+                <span class="field__label">Заезд</span>
+                <input name="checkin" type="date" required min="2026-12-30">
+                <span class="field__error" data-error-for="checkin"></span>
+              </label>
+              <label class="field">
+                <span class="field__label">Выезд</span>
+                <input name="checkout" type="date" required min="2026-12-31">
+                <span class="field__error" data-error-for="checkout"></span>
+              </label>
+            </div>
+            <label class="field">
+              <span class="field__label">Комментарий <i>(необязательно)</i></span>
+              <textarea name="comment" rows="2" maxlength="500" placeholder="Например: приедем поздно вечером"></textarea>
+            </label>
+            <!-- Ловушка для ботов: люди это поле не видят -->
+            <label class="hp" aria-hidden="true">Сайт<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+
+            <label class="check">
+              <input type="checkbox" name="consent" required>
+              <span>Даю <u>согласие на обработку персональных данных</u> и подтверждаю, что ознакомлен(а) с <u>политикой конфиденциальности</u>.</span>
+            </label>
+            <span class="field__error" data-error-for="consent"></span>
+
+            <button class="btn btn--accent btn--lg btn--block" type="submit" data-submit>
+              <span class="btn__label">Отправить заявку</span>
+            </button>
+            <p class="form__status" role="status" aria-live="polite" data-status></p>
+          </form>
+
+          <div class="form-done" hidden data-done>
+            <h3 class="h3">Заявка принята</h3>
+            <p>Спасибо! Номер заявки <b data-lead-id></b>. Администратор перезвонит, чтобы подтвердить даты и цену. Если хочется быстрее - позвоните нам.</p>
+            <button type="button" class="btn btn--ghost-light" data-again>Отправить ещё одну заявку</button>
+          </div>
+        </div>
+
+        <aside class="contacts" id="contacts" aria-labelledby="contacts-title">
+          <h3 class="h3" id="contacts-title">Удобнее позвонить или&nbsp;написать?</h3>
+          <a class="contacts__call" href="tel:+70000000000">
+            <svg aria-hidden="true"><use href="#i-phone"/></svg>
+            <span><small>Позвонить</small>+7 (000) 000-00-00</span>
+          </a>
+          <div class="contacts__msg">
+            <a class="msg msg--wa" href="https://wa.me/70000000000?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BD%D0%BE%D0%BC%D0%B5%D1%80%20%D0%B2%20%D0%B3%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B8%D1%86%D0%B5%20%C2%AB%D0%A0%D1%83%D0%BD%D0%B0%C2%BB." target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp
+            </a>
+            <a class="msg msg--tg" href="https://t.me/+70000000000" target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-tg"/></svg>Telegram
+            </a>
+            <a class="msg msg--max" href="https://max.ru/" target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-max"/></svg>MAX
+            </a>
+          </div>
+          <a class="contacts__mail" href="mailto:demo@example.com"><svg aria-hidden="true"><use href="#i-mail"/></svg>demo@example.com</a>
+          <p class="contacts__note">Ресепшен работает круглосуточно. Сейчас, пока гостиница закрыта, отвечаем на звонки и сообщения в течение дня.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <div class="wrap">
+      <p class="footer__statement">Ждём вас с&nbsp;30&nbsp;декабря</p>
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <svg class="footer__logo" aria-hidden="true"><use href="#logo"/></svg>
+          <p>Гостиница «Надежда»<br>Петрозаводск, ул. Примерная, 1</p>
+        </div>
+        <ul class="footer__links">
+          <li><a href="tel:+70000000000">+7 (000) 000-00-00</a></li>
+          <li><a href="mailto:demo@example.com">demo@example.com</a></li>
+          <li><a href="#location">Как добраться</a></li>
+        </ul>
+        <ul class="footer__links">
+          <li><span>Демонстрационная версия сайта</span></li>
+          <li><span>Заявки не принимаются</span></li>
+          <li><span>© 2026 Гостиница «Надежда»</span></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Нижняя панель действий на телефоне -->
+  <nav class="actionbar" aria-label="Быстрая связь">
+    <a href="tel:+70000000000"><svg aria-hidden="true"><use href="#i-phone"/></svg>Позвонить</a>
+    <button type="button" aria-expanded="false" aria-controls="msg-sheet" data-sheet-toggle><svg aria-hidden="true"><use href="#i-chat"/></svg>Написать</button>
+    <a href="#booking" class="actionbar__main"><svg aria-hidden="true"><use href="#i-cal"/></svg>Бронь</a>
+  </nav>
+  <div class="sheet" id="msg-sheet" hidden>
+    <a class="msg msg--wa" href="https://wa.me/70000000000" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+    <a class="msg msg--tg" href="https://t.me/+70000000000" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-tg"/></svg>Telegram</a>
+    <a class="msg msg--max" href="https://max.ru/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-max"/></svg>MAX</a>
+  </div>
+
+  <!-- Просмотр фото на весь экран -->
+  <dialog class="lightbox" aria-label="Просмотр фото" data-lightbox>
+    <img alt="" data-lightbox-img>
+    <p class="lightbox__caption" data-lightbox-caption></p>
+    <button type="button" class="lightbox__btn lightbox__close" data-lightbox-close aria-label="Закрыть">×</button>
+    <button type="button" class="lightbox__btn lightbox__prev" data-lightbox-prev aria-label="Предыдущее фото"><svg aria-hidden="true" class="flip"><use href="#i-arrow"/></svg></button>
+    <button type="button" class="lightbox__btn lightbox__next" data-lightbox-next aria-label="Следующее фото"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+  </dialog>
+
+  <div class="demo-badge" aria-hidden="true">Демоверсия</div>
+  <script src="js/logger.js"></script>
+  <script src="js/main.js"></script>

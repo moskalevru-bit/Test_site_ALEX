@@ -1,0 +1,92 @@
+/* Hallmark · macrostructure: Split Studio (photographic hero) · tone: тёплый, спокойный, северный · anchor hue: 220 (онежская вода)
+ * theme: custom · vibe: "карельская береза, онежская вода, тёплое дерево"
+ * paper oklch(97.2% 0.010 85) · accent oklch(44% 0.08 220) · Cormorant Garamond + Onest
+ * axes: light / high-contrast-serif / cool
+ *
+ * Токены дизайна гостиницы «Руна». Все цвета, шрифты и отступы сайта берутся отсюда.
+ */
+:root {
+  /* Цвета: бумага (фон), чернила (текст), акцент (онежская вода) */
+  --color-paper: oklch(97.2% 0.010 85);
+  --color-paper-2: oklch(94.2% 0.016 80);
+  --color-paper-3: oklch(90.5% 0.020 78);
+  --color-ink: oklch(23% 0.022 245);
+  --color-ink-2: oklch(38% 0.020 245);
+  --color-ink-3: oklch(48% 0.018 245);
+  --color-rule: oklch(86% 0.016 80);
+  --color-accent: oklch(44% 0.080 220);
+  --color-accent-hover: oklch(37% 0.080 220);
+  --color-accent-soft: oklch(92.5% 0.022 215);
+  --color-on-accent: oklch(98% 0.006 85);
+  --color-night: oklch(20% 0.024 240);
+  --color-night-2: oklch(26% 0.026 240);
+  --color-on-night: oklch(95% 0.010 85);
+  --color-on-night-2: oklch(80% 0.014 85);
+  --color-scrim: oklch(16% 0.02 240 / 0.62);
+  --color-scrim-soft: oklch(16% 0.02 240 / 0);
+  --color-gold: oklch(72% 0.085 72);
+  --color-focus: oklch(58% 0.140 230);
+  --color-error: oklch(50% 0.170 27);
+  --color-error-soft: oklch(95% 0.025 27);
+  --color-error-on-night: oklch(80% 0.110 27);
+  --color-success: oklch(46% 0.100 155);
+  --color-success-soft: oklch(95% 0.030 155);
+  --color-shadow: oklch(20% 0.02 240 / 0.14);
+
+  /* Цвета мессенджеров (узнаваемость кнопок) */
+  --color-wa: oklch(62% 0.170 150);
+  --color-tg: oklch(62% 0.140 235);
+  --color-max: oklch(55% 0.200 285);
+
+  /* Шрифты: заголовки - Cormorant Garamond, текст - Onest (оба с кириллицей) */
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-body: "Onest", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Размеры текста (плавно меняются от телефона к ПК) */
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: clamp(1.125rem, 1rem + 0.4vw, 1.3125rem);
+  --text-xl: clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem);
+  --text-2xl: clamp(1.75rem, 1.4rem + 1.4vw, 2.625rem);
+  --text-3xl: clamp(2.125rem, 1.6rem + 2.2vw, 3.5rem);
+  --text-display-s: clamp(2.375rem, 1.6rem + 3.4vw, 4.75rem);
+
+  /* Отступы, шаг 4 px */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4.5rem;
+  --space-3xl: clamp(4.5rem, 3rem + 6vw, 8rem);
+
+  /* Скругления, линии */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --rule-hair: 1px solid var(--color-rule);
+
+  /* Движение */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in: cubic-bezier(0.55, 0, 1, 0.45);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 140ms;
+  --dur-base: 240ms;
+  --dur-slow: 520ms;
+
+  /* Безопасные зоны экрана: вырезы камеры, скругления, панель жестов */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --gutter: 16px;
+  --page-max: 1240px;
+  --bar-h: 64px;
+}
+
+@media (min-width: 560px) { :root { --gutter: 24px; } }
+@media (min-width: 1024px) { :root { --gutter: 40px; } }
