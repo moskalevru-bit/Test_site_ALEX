@@ -1,0 +1,129 @@
+/*
+ * Кнопки мессенджеров (WhatsApp, Telegram, MAX)
+ * Фирменный цвет каждого мессенджера, объёмный градиент, бегущий блик
+ * и анимация нажатия. Подключается после styles.css и переопределяет .chip и .msg.
+ */
+
+.msg,
+.chip {
+  --m-top: #2bd46f;
+  --m-mid: #0e8a43;
+  --m-low: #0a6b34;
+  --m-glow: 14 138 67;
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 0;
+  color: #fff;
+  background: linear-gradient(160deg, var(--m-top) 0%, var(--m-mid) 52%, var(--m-low) 100%);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.38),
+    inset 0 -2px 0 rgb(0 0 0 / 0.12),
+    0 8px 20px -8px rgb(var(--m-glow) / 0.75);
+  text-shadow: 0 1px 1px rgb(0 0 0 / 0.18);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition:
+    transform 420ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 240ms ease-out,
+    filter 240ms ease-out;
+}
+
+.msg--wa, .chip--wa  { --m-top: #2bd46f; --m-mid: #0e8a43; --m-low: #0a6b34; --m-glow: 14 138 67; }
+.msg--tg, .chip--tg  { --m-top: #4cc3f5; --m-mid: #1878c4; --m-low: #135f9e; --m-glow: 24 120 196; }
+.msg--max, .chip--max { --m-top: #8a7bff; --m-mid: #5a3fe0; --m-low: #4429b8; --m-glow: 90 63 224; }
+
+/* Иконки белые, поверх цвета */
+.msg svg,
+.chip svg,
+.chip--wa svg, .msg--wa svg,
+.chip--tg svg, .msg--tg svg,
+.chip--max svg, .msg--max svg {
+  color: #fff;
+  filter: drop-shadow(0 1px 1px rgb(0 0 0 / 0.18));
+}
+
+/* Бегущий блик: одна волна света проходит по кнопкам по очереди */
+.msg::before,
+.chip::before {
+  content: "";
+  position: absolute;
+  inset: -20% auto -20% 0;
+  width: 60%;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(105deg,
+    transparent 0%,
+    rgb(255 255 255 / 0) 30%,
+    rgb(255 255 255 / 0.55) 50%,
+    rgb(255 255 255 / 0) 70%,
+    transparent 100%);
+  transform: translateX(-160%) skewX(-12deg);
+  animation: m-glint 6s ease-in-out infinite;
+}
+.msg:nth-of-type(2)::before, .chip:nth-of-type(2)::before { animation-delay: 0.22s; }
+.msg:nth-of-type(3)::before, .chip:nth-of-type(3)::before { animation-delay: 0.44s; }
+
+@keyframes m-glint {
+  0%   { transform: translateX(-160%) skewX(-12deg); }
+  16%  { transform: translateX(260%) skewX(-12deg); }
+  100% { transform: translateX(260%) skewX(-12deg); }
+}
+
+/* Наведение мышью: кнопка чуть приподнимается и светится */
+@media (hover: hover) {
+  .msg:hover,
+  .chip:hover {
+    border-color: transparent;
+    filter: brightness(1.06) saturate(1.08);
+    transform: translateY(-2px);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.45),
+      inset 0 -2px 0 rgb(0 0 0 / 0.12),
+      0 14px 28px -10px rgb(var(--m-glow) / 0.9);
+  }
+}
+
+/* Нажатие: кнопка проседает, после отпускания пружинит обратно */
+.msg:active,
+.chip:active {
+  transform: translateY(1px) scale(0.94);
+  filter: brightness(0.96);
+  box-shadow:
+    inset 0 2px 6px rgb(0 0 0 / 0.22),
+    0 3px 8px -4px rgb(var(--m-glow) / 0.8);
+  transition-duration: 90ms;
+}
+
+/* Световая волна от точки касания (добавляется скриптом js/press.js) */
+.m-ripple {
+  position: absolute;
+  z-index: -1;
+  width: 24px;
+  height: 24px;
+  margin: -12px 0 0 -12px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgb(255 255 255 / 0.7) 0%, rgb(255 255 255 / 0.25) 45%, rgb(255 255 255 / 0) 70%);
+  transform: scale(0);
+  animation: m-ripple 620ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+@keyframes m-ripple {
+  to { transform: scale(14); opacity: 0; }
+}
+
+/* Видимая рамка при переходе с клавиатуры */
+.msg:focus-visible,
+.chip:focus-visible {
+  outline: 3px solid var(--color-focus, #f5c04a);
+  outline-offset: 3px;
+}
+
+/* Кто отключил анимацию в настройках устройства: без блика и волны */
+@media (prefers-reduced-motion: reduce) {
+  .msg::before, .chip::before { animation: none; opacity: 0; }
+  .m-ripple { display: none; }
+  .msg, .chip { transition: none; }
+  .msg:hover, .chip:hover { transform: none; }
+}
