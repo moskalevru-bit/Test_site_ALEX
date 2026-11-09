@@ -1,5 +1,12 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Защита: страница грузит скрипты, стили, шрифты и картинки только со своего сайта и Google Fonts -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Гостиница Надежда</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <meta name="robots" content="noindex">
 <meta name="format-detection" content="telephone=no">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -8,6 +15,8 @@
 <link rel="stylesheet" href="tokens.css">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="demo.css">
+</head>
+<body>
 
   <!-- Логотип: перерисован в векторе по фирменному знаку гостиницы -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -357,7 +366,7 @@
           </ul>
         </div>
         <div class="map reveal">
-          <a class="map__link" href="https://yandex.ru/maps/?ll=34.3392%2C61.7866&amp;z=17&amp;l=map&amp;pt=34.3358%2C61.7877%2Cpm2dbl" target="_blank" rel="noopener">
+          <a class="map__link" href="https://yandex.ru/maps/?ll=34.3392%2C61.7866&amp;z=17&amp;l=map&amp;pt=34.3358%2C61.7877%2Cpm2dbl" target="_blank" rel="noopener noreferrer">
             <img src="img/map-s.jpg" srcset="img/map-s.jpg 800w, img/map.jpg 1200w" sizes="(min-width: 900px) 50vw, 100vw" width="800" height="600" loading="lazy" alt="Схема района: гостиница рядом автовокзал и ж/д вокзал">
             <span class="map__cta">Открыть в Яндекс Картах <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
           </a>
@@ -372,9 +381,9 @@
           <h2 class="h2" id="rules-title">Правила проживания и частые вопросы</h2>
           <p>Собрали ответы на то, о чём гости чаще всего спрашивают по телефону. Не нашли свой вопрос - напишите нам в мессенджер.</p>
           <div class="contact-mini">
-            <a class="chip chip--wa" href="https://wa.me/70000000000" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
-            <a class="chip chip--tg" href="https://t.me/+70000000000" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-tg"/></svg>Telegram</a>
-            <a class="chip chip--max" href="https://max.ru/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-max"/></svg>MAX</a>
+            <a class="chip chip--wa" href="https://wa.me/70000000000" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+            <a class="chip chip--tg" href="https://t.me/+70000000000" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-tg"/></svg>Telegram</a>
+            <a class="chip chip--max" href="https://max.ru/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-max"/></svg>MAX</a>
           </div>
         </div>
         <div class="faq reveal">
@@ -493,13 +502,13 @@
             <span><small>Позвонить</small>+7 (000) 000-00-00</span>
           </a>
           <div class="contacts__msg">
-            <a class="msg msg--wa" href="https://wa.me/70000000000?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BD%D0%BE%D0%BC%D0%B5%D1%80%20%D0%B2%20%D0%B3%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B8%D1%86%D0%B5%20%C2%AB%D0%A0%D1%83%D0%BD%D0%B0%C2%BB." target="_blank" rel="noopener">
+            <a class="msg msg--wa" href="https://wa.me/70000000000?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BD%D0%BE%D0%BC%D0%B5%D1%80%20%D0%B2%20%D0%B3%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B8%D1%86%D0%B5%20%C2%AB%D0%A0%D1%83%D0%BD%D0%B0%C2%BB." target="_blank" rel="noopener noreferrer">
               <svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp
             </a>
-            <a class="msg msg--tg" href="https://t.me/+70000000000" target="_blank" rel="noopener">
+            <a class="msg msg--tg" href="https://t.me/+70000000000" target="_blank" rel="noopener noreferrer">
               <svg aria-hidden="true"><use href="#i-tg"/></svg>Telegram
             </a>
-            <a class="msg msg--max" href="https://max.ru/" target="_blank" rel="noopener">
+            <a class="msg msg--max" href="https://max.ru/" target="_blank" rel="noopener noreferrer">
               <svg aria-hidden="true"><use href="#i-max"/></svg>MAX
             </a>
           </div>
@@ -540,9 +549,9 @@
     <a href="#booking" class="actionbar__main"><svg aria-hidden="true"><use href="#i-cal"/></svg>Бронь</a>
   </nav>
   <div class="sheet" id="msg-sheet" hidden>
-    <a class="msg msg--wa" href="https://wa.me/70000000000" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
-    <a class="msg msg--tg" href="https://t.me/+70000000000" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-tg"/></svg>Telegram</a>
-    <a class="msg msg--max" href="https://max.ru/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-max"/></svg>MAX</a>
+    <a class="msg msg--wa" href="https://wa.me/70000000000" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+    <a class="msg msg--tg" href="https://t.me/+70000000000" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-tg"/></svg>Telegram</a>
+    <a class="msg msg--max" href="https://max.ru/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#i-max"/></svg>MAX</a>
   </div>
 
   <!-- Просмотр фото на весь экран -->
@@ -557,3 +566,5 @@
   <div class="demo-badge" aria-hidden="true">Демоверсия</div>
   <script src="js/logger.js"></script>
   <script src="js/main.js"></script>
+</body>
+</html>
